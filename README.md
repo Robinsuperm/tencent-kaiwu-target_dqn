@@ -1,0 +1,11 @@
+# 腾讯开悟人工智能全球公开赛 - DQN 迷宫导航项目
+
+四川省三等奖（2024.06-2024.09）
+
+项目介绍：
+- 使用 Target DQN 算法
+- 状态观测网络（CNN + 4帧堆叠）
+- 自定义 reward_shaping 解决稀疏奖励
+- 完整训练流程与 ablation 实验
+
+技术栈：PyTorch, DQN, ε-greedy, Target Network
