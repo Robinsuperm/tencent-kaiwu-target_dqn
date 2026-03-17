@@ -297,11 +297,6 @@ def reward_shaping(
     if (x_diff ** 2 + z_diff ** 2) ** 0.5 < 200:
         reward_laziness -= 0.1
 
-    """
-    Concatenation of rewards: Here are 10 rewards provided,
-    students can concatenate as needed, and can also add new rewards themselves
-    奖励的拼接: 这里提供了10个奖励, 同学们按需自行拼接, 也可以自行添加新的奖励
-    """
     REWARD_CONFIG = {
         "reward_end_dist": "1",
         "reward_win": "1",
