@@ -1,15 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding:utf-8 -*-
-
-
-"""
-@Project :back_to_the_realm
-@File    :model.py
-@Author  :kaiwu
-@Date    :2022/11/15 20:57
-
-"""
-
 import torch
 import numpy as np
 from torch import nn
