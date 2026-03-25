@@ -1,14 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding:utf-8 -*-
-
-"""
-@Project :back_to_the_realm
-@File    :definition.py
-@Author  :kaiwu
-@Date    :2022/12/15 22:50
-
-"""
-
 from kaiwu_agent.utils.common_func import create_cls, attached
 import numpy as np
 from kaiwu_agent.back_to_the_realm.target_dqn.feature_process import (
@@ -17,23 +6,17 @@ from kaiwu_agent.back_to_the_realm.target_dqn.feature_process import (
     bump,
 )
 
-
-# The create_cls function is used to dynamically create a class. The first parameter of the function is the type name,
-# and the remaining parameters are the attributes of the class, which should have a default value of None.
-# create_cls函数用于动态创建一个类，函数第一个参数为类型名称，剩余参数为类的属性，属性默认值应设为None
 ObsData = create_cls(
     "ObsData",
     feature=None,
     legal_act=None,
 )
 
-
 ActData = create_cls(
     "ActData",
     move_dir=None,
     use_talent=None,
 )
-
 
 SampleData = create_cls(
     "SampleData",
@@ -46,7 +29,6 @@ SampleData = create_cls(
     ret=None,
     done=None,
 )
-
 
 def reward_shaping(
     frame_no, score, terminated, truncated, obs, _obs, env_info, _env_info, bump_cnt, step
@@ -462,8 +444,6 @@ def SampleData2NumpyData(g_data):
 @attached
 def NumpyData2SampleData(s_data):
     return SampleData(
-        # Refer to the DESC_OBS_SPLIT configuration in config.py for dimension reference
-        # 维度参考config.py 中的 DESC_OBS_SPLIT配置
         obs=s_data[:10808],
         _obs=s_data[10808:21616],
         obs_legal=s_data[-8:-6],
