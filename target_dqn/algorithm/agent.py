@@ -1,14 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding:utf-8 -*-
-
-"""
-@Project :back_to_the_realm
-@File    :agent.py
-@Author  :kaiwu
-@Date    :2022/12/15 22:50
-
-"""
-
 import torch
 
 torch.set_num_threads(1)
@@ -105,9 +94,8 @@ class Agent(BaseAgent):
         )
         model = self.model
         model.eval()
-        # Exploration factor, starting with an initial epsilon of 0.5,
-        # we want epsilon to decrease as the number of prediction steps increases, until it reaches 0.1
-        # 探索因子, 初始epsilon为0.5，我们希望epsilon随着预测步数越来越小，直到0.1为止
+
+        # 探索因子, 初始epsilon为0.5，epsilon随着预测步数越来越小，直到0.1为止
         self.epsilon = max(0.1, 0.5 - self.predict_count / self.egp)
 
         with torch.no_grad():
