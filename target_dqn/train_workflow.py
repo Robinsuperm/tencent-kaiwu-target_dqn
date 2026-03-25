@@ -1,14 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding:utf-8 -*-
-
-"""
-@Project :back_to_the_realm
-@File    :train_workflow.py
-@Author  :kaiwu
-@Date    :2022/12/15 22:50
-
-"""
-
 import time
 from kaiwu_agent.utils.common_func import Frame
 from kaiwu_agent.utils.common_func import attached
